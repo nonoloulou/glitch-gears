@@ -1,0 +1,40 @@
+"use client";
+
+type SearchBarProps = {
+  value: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+};
+
+export default function SearchBar({
+  value,
+  onChange,
+  placeholder = "Search by name, category, or tags…",
+}: SearchBarProps) {
+  return (
+    <div className="relative w-full">
+      <svg
+        className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-text-muted"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={1.5}
+        aria-hidden
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        />
+      </svg>
+      <input
+        type="search"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        className="soft-input pl-12"
+        aria-label="Search products"
+      />
+    </div>
+  );
+}
