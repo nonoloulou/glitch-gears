@@ -35,7 +35,7 @@ export default function HomePageClient({
           <button
             type="button"
             onClick={() => setActiveTag("")}
-            className="rounded-full bg-neutral-200 px-3 py-1 text-xs font-medium text-neutral-900 transition-all duration-300 hover:bg-white"
+            className="rounded-full bg-slate-700 px-3 py-1 text-xs font-medium text-slate-100 transition-all duration-300 hover:bg-slate-600"
           >
             {activeTag} ×
           </button>

@@ -118,7 +118,7 @@ export default function TypeManager() {
           <button
             type="button"
             onClick={createType}
-            className="rounded-2xl bg-white px-5 py-3 font-semibold text-slate-950 transition hover:bg-slate-200"
+            className="rounded-2xl bg-slate-700 px-5 py-3 font-semibold text-slate-100 transition hover:bg-slate-600"
           >
             Add type
           </button>
@@ -155,7 +155,7 @@ export default function TypeManager() {
                   <button
                     type="button"
                     onClick={saveEdit}
-                    className="rounded-2xl bg-white px-4 py-2 font-semibold text-slate-950 transition hover:bg-slate-200"
+                    className="rounded-2xl bg-slate-700 px-4 py-2 font-semibold text-slate-100 transition hover:bg-slate-600"
                   >
                     Save
                   </button>

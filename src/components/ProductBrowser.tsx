@@ -120,7 +120,7 @@ export default function ProductBrowser({ products }: Props) {
                 onClick={() => setSelectedTag(tag)}
                 className={`rounded-full px-4 py-2 text-sm transition ${
                   active
-                    ? 'bg-white text-slate-950 shadow-soft'
+                    ? 'bg-slate-200/10 text-slate-100 shadow-soft'
                     : 'bg-slate-900 text-slate-300 hover:bg-slate-800'
                 }`}
               >
@@ -156,7 +156,7 @@ export default function ProductBrowser({ products }: Props) {
                   {product.type || 'Uncategorized'}
                 </span>
                 <span className="text-lg font-semibold text-white">
-                  ${product.price.toFixed(2)}
+                  {product.price.toFixed(2)} DA
                 </span>
               </div>
               <h2 className="mb-3 text-xl font-semibold text-white">

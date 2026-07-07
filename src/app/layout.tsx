@@ -26,9 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen font-sans`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-slate-100 font-sans`}
       >
-        <header className="border-b border-border-soft/60 bg-surface/80 backdrop-blur-md">
+        <header className="border-b border-slate-700/40 bg-slate-900/70 backdrop-blur-xl">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6">
             <Link
               href="/"
@@ -47,7 +47,7 @@ export default function RootLayout({
         <main className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
           {children}
         </main>
-        <footer className="border-t border-border-soft/60">
+        <footer className="border-t border-slate-700/30 bg-slate-900/70">
           <div className="mx-auto max-w-6xl px-4 py-8 text-center text-sm text-text-muted sm:px-6">
             © {new Date().getFullYear()} Product Showcase
           </div>
