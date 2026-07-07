@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
-import HomePageClient from "@/components/HomePageClient";
-import type { Product, Promotion } from "@/lib/types";
+import ProductBrowser from "@/components/ProductBrowser";
+import type { Product } from "@/lib/types";
 
 export const revalidate = 0;
 
@@ -19,34 +19,8 @@ async function getProducts(): Promise<Product[]> {
   return (data ?? []) as Product[];
 }
 
-async function getActivePromotion(): Promise<Promotion | null> {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("promotions")
-    .select("*")
-    .eq("active", true)
-    .order("created_at", { ascending: false })
-    .limit(1)
-    .maybeSingle();
-
-  if (error) {
-    console.error("Failed to fetch promotion:", error.message);
-    return null;
-  }
-
-  return data as Promotion | null;
-}
-
 export default async function HomePage() {
-  const [products, promotion] = await Promise.all([
-    getProducts(),
-    getActivePromotion(),
-  ]);
+  const products = await getProducts();
 
-  return (
-    <HomePageClient
-      initialProducts={products}
-      initialPromotion={promotion}
-    />
-  );
+  return <ProductBrowser products={products} />;
 }

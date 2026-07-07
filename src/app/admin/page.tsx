@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/client";
 import type { Product, ProductFormData, Promotion, PromotionFormData } from "@/lib/types";
 import AdminProductForm from "@/components/AdminProductForm";
 import AdminPromotionForm from "@/components/AdminPromotionForm";
+import TypeManager from "@/components/TypeManager";
 import { formatPrice } from "@/lib/utils";
 
 type Tab = "products" | "promotions";
@@ -309,6 +310,10 @@ export default function AdminDashboard() {
           </div>
         </div>
       )}
+
+      <div className="rounded-2xl bg-slate-950/80 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
+        <TypeManager />
+      </div>
     </div>
   );
 }
