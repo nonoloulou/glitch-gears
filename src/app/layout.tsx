@@ -32,7 +32,7 @@ export default function RootLayout({
           <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6">
             <Link
               href="/"
-              className="text-lg font-medium tracking-tight text-white transition-opacity duration-300 hover:opacity-80"
+              className="text-lg font-medium tracking-tight text-text-primary transition-opacity duration-300 hover:opacity-80"
             >
               Product Showcase
             </Link>

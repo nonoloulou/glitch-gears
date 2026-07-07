@@ -129,7 +129,7 @@ export default function AdminProductForm({
           />
         </div>
         <div>
-          <label className="mb-2 block text-sm text-text-secondary">Price ($)</label>
+          <label className="mb-2 block text-sm text-text-secondary">Price (DA)</label>
           <input
             required
             type="number"
@@ -155,7 +155,7 @@ export default function AdminProductForm({
               }}
               className="rounded"
             />
-            Discount price ($)
+            Discount price (DA)
           </label>
           <input
             type="number"

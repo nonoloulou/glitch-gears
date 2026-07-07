@@ -102,7 +102,7 @@ export default function TypeManager() {
     <div className="rounded-2xl bg-slate-950/80 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h2 className="text-2xl font-semibold text-white">Product Types</h2>
+          <h2 className="text-2xl font-semibold text-text-primary">Product Types</h2>
           <p className="mt-2 text-sm text-slate-400">
             Rename or delete types, and create new ones for your products.
           </p>

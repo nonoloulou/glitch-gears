@@ -31,7 +31,7 @@ export default function PromotionBanner({ promotion }: PromotionBannerProps) {
           <p className="text-xs uppercase tracking-[0.2em] text-text-muted">
             Promotions & Offers
           </p>
-          <h2 className="text-2xl font-medium leading-tight text-white md:text-3xl">
+          <h2 className="text-2xl font-medium leading-tight text-text-primary md:text-3xl">
             {promotion.title}
           </h2>
           <p className="text-base leading-relaxed text-text-secondary">

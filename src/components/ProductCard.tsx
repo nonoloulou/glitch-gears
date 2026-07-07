@@ -74,12 +74,12 @@ export default function ProductCard({
               <span className="text-sm text-text-muted line-through">
                 {formatPrice(product.price)}
               </span>
-              <span className="text-xl font-semibold text-white">
+              <span className="text-xl font-semibold text-text-primary">
                 {formatPrice(product.discount_price!)}
               </span>
             </>
           ) : (
-            <span className="text-xl font-semibold text-white">
+            <span className="text-xl font-semibold text-text-primary">
               {formatPrice(product.price)}
             </span>
           )}

@@ -155,7 +155,7 @@ export default function ProductBrowser({ products }: Props) {
                 <span className="rounded-full bg-slate-800 px-3 py-1 text-xs uppercase tracking-[0.18em] text-slate-400">
                   {product.type || 'Uncategorized'}
                 </span>
-                <span className="text-lg font-semibold text-white">
+                <span className="text-lg font-semibold text-text-primary">
                   {product.price.toFixed(2)} DA
                 </span>
               </div>

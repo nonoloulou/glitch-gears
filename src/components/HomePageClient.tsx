@@ -47,7 +47,7 @@ export default function HomePageClient({
       <section className="space-y-6">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-xl font-medium text-white">All products</h2>
+            <h2 className="text-xl font-medium text-text-primary">All products</h2>
             <p className="mt-1 text-sm text-text-secondary">
               {initialProducts.length} product
               {initialProducts.length !== 1 ? "s" : ""} available
