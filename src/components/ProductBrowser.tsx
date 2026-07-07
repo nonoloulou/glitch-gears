@@ -20,8 +20,15 @@ type Props = {
 
 function normalizeTags(tags: string[] | string | null): string[] {
   if (!tags) return []
+  
+  // إذا كان مصفوفة، نرجعه مباشرة بعد تصفيته
   if (Array.isArray(tags)) return tags.filter(Boolean)
+  
+  // إذا وصلنا إلى هنا، فهذا يعني أن tags عبارة عن نص (string)
+  // نقوم بتقسيمه إلى مصفوفة (بافتراض أنه مفصول بفاصلة أو مسافات)
+  // أو إذا كان مجرد نص واحد، نضعه في مصفوفة
   return tags
+    .split(',') // تقسيم النص إذا كان يحتوي على فواصل، يمكنك تغيير الفاصلة حسب حاجتك
     .map((tag) => tag.trim())
     .filter(Boolean)
 }
