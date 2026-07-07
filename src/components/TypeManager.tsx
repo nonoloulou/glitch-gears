@@ -99,29 +99,26 @@ export default function TypeManager() {
   }
 
   return (
-    <div className="rounded-2xl bg-slate-950/80 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
+    <div className="rounded-2xl bg-neutral-950/80 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h2 className="text-2xl font-semibold text-text-primary">Product Types</h2>
-          <p className="mt-2 text-sm text-slate-400">
-            Rename or delete types, and create new ones for your products.
-          </p>
-        </div>
+              <p className="mt-2 text-sm text-text-secondary">
+                Rename or delete types, and create new ones for your products.
+              </p>
+            </div>
 
-        <div className="flex flex-col gap-3 sm:flex-row">
-          <input
-            value={newTypeName}
-            onChange={(event) => setNewTypeName(event.target.value)}
-            placeholder="New type name"
-            className="rounded-2xl border border-slate-800 bg-slate-900 px-4 py-3 text-white outline-none"
-          />
-          <button
-            type="button"
-            onClick={createType}
-            className="rounded-2xl bg-slate-700 px-5 py-3 font-semibold text-slate-100 transition hover:bg-slate-600"
-          >
-            Add type
-          </button>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <input
+                value={newTypeName}
+                onChange={(event) => setNewTypeName(event.target.value)}
+                placeholder="New type name"
+                className="rounded-2xl border border-neutral-800 bg-neutral-900 px-4 py-3 text-text-primary outline-none"
+              />
+              <button
+                type="button"
+                onClick={createType}
+                className="rounded-2xl bg-neutral-700 px-5 py-3 font-semibold text-neutral-100 transition hover:bg-neutral-600"
         </div>
       </div>
 
@@ -135,14 +132,14 @@ export default function TypeManager() {
         {types.map((type) => (
           <div
             key={type.id}
-            className="flex flex-col gap-3 rounded-3xl bg-slate-900 p-4 shadow-soft sm:flex-row sm:items-center sm:justify-between"
+            className="flex flex-col gap-3 rounded-3xl bg-neutral-900 p-4 shadow-soft sm:flex-row sm:items-center sm:justify-between"
           >
             <div className="min-w-0">
               {editing?.id === type.id ? (
                 <input
                   value={editingName}
                   onChange={(event) => setEditingName(event.target.value)}
-                  className="w-full rounded-2xl border border-slate-800 bg-slate-950 px-4 py-3 text-white outline-none"
+                  className="w-full rounded-2xl border border-neutral-800 bg-neutral-950 px-4 py-3 text-white outline-none"
                 />
               ) : (
                 <p className="text-lg font-semibold text-white">{type.name}</p>
@@ -155,7 +152,7 @@ export default function TypeManager() {
                   <button
                     type="button"
                     onClick={saveEdit}
-                    className="rounded-2xl bg-slate-700 px-4 py-2 font-semibold text-slate-100 transition hover:bg-slate-600"
+                    className="rounded-2xl bg-neutral-700 px-4 py-2 font-semibold text-neutral-100 transition hover:bg-neutral-600"
                   >
                     Save
                   </button>
@@ -166,7 +163,7 @@ export default function TypeManager() {
                       setEditingName('')
                       setMessage(null)
                     }}
-                    className="rounded-2xl bg-slate-800 px-4 py-2 text-slate-300 transition hover:bg-slate-700"
+                    className="rounded-2xl bg-neutral-800 px-4 py-2 text-neutral-300 transition hover:bg-neutral-700"
                   >
                     Cancel
                   </button>
@@ -180,7 +177,7 @@ export default function TypeManager() {
                       setEditingName(type.name)
                       setMessage(null)
                     }}
-                    className="rounded-2xl bg-slate-800 px-4 py-2 text-slate-300 transition hover:bg-slate-700"
+                    className="rounded-2xl bg-neutral-800 px-4 py-2 text-neutral-300 transition hover:bg-neutral-700"
                   >
                     Rename
                   </button>

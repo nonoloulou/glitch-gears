@@ -76,7 +76,7 @@ export default function ProductBrowser({ products }: Props) {
   }, [products, selectedType, selectedTag, search])
 
   return (
-    <div className="rounded-2xl bg-slate-950/80 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
+    <div className="rounded-2xl bg-neutral-950/80 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
       <div className="mb-6 flex flex-col gap-4">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex-1">
@@ -88,18 +88,18 @@ export default function ProductBrowser({ products }: Props) {
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search products"
-              className="w-full rounded-2xl border border-slate-800 bg-slate-900 px-4 py-3 text-white shadow-soft outline-none transition focus:border-slate-600"
+              className="w-full rounded-2xl border border-neutral-800 bg-neutral-900 px-4 py-3 text-text-primary shadow-soft outline-none transition focus:border-neutral-600"
             />
           </div>
 
-          <div className="min-w-[200px] rounded-2xl bg-slate-900 p-3 shadow-soft">
-            <label className="mb-2 block text-xs uppercase tracking-[0.2em] text-slate-400">
+          <div className="min-w-[200px] rounded-2xl bg-neutral-900 p-3 shadow-soft">
+            <label className="mb-2 block text-xs uppercase tracking-[0.2em] text-text-secondary">
               Filter by type
             </label>
             <select
               value={selectedType}
               onChange={(event) => setSelectedType(event.target.value)}
-              className="w-full rounded-2xl bg-slate-950 px-3 py-3 text-white outline-none"
+              className="w-full rounded-2xl bg-neutral-950 px-3 py-3 text-text-primary outline-none"
             >
               {typeOptions.map((type) => (
                 <option key={type} value={type}>
@@ -120,8 +120,8 @@ export default function ProductBrowser({ products }: Props) {
                 onClick={() => setSelectedTag(tag)}
                 className={`rounded-full px-4 py-2 text-sm transition ${
                   active
-                    ? 'bg-slate-200/10 text-slate-100 shadow-soft'
-                    : 'bg-slate-900 text-slate-300 hover:bg-slate-800'
+                    ? 'bg-neutral-200/10 text-neutral-100 shadow-soft'
+                    : 'bg-neutral-900 text-neutral-300 hover:bg-neutral-800'
                 }`}
               >
                 {tag}
@@ -136,9 +136,9 @@ export default function ProductBrowser({ products }: Props) {
           filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="overflow-hidden rounded-3xl bg-slate-900 p-5 shadow-soft"
+              className="overflow-hidden rounded-3xl bg-neutral-900 p-5 shadow-soft"
             >
-              <div className="mb-4 h-52 overflow-hidden rounded-3xl bg-slate-800">
+              <div className="mb-4 h-52 overflow-hidden rounded-3xl bg-neutral-800">
                 {product.image_url ? (
                   <img
                     src={product.image_url}
@@ -146,30 +146,30 @@ export default function ProductBrowser({ products }: Props) {
                     className="h-full w-full object-cover"
                   />
                 ) : (
-                  <div className="flex h-full items-center justify-center text-slate-500">
+                  <div className="flex h-full items-center justify-center text-text-secondary">
                     No image
                   </div>
                 )}
               </div>
               <div className="mb-3 flex items-center justify-between gap-3">
-                <span className="rounded-full bg-slate-800 px-3 py-1 text-xs uppercase tracking-[0.18em] text-slate-400">
+                <span className="rounded-full bg-neutral-800 px-3 py-1 text-xs uppercase tracking-[0.18em] text-text-secondary">
                   {product.type || 'Uncategorized'}
                 </span>
                 <span className="text-lg font-semibold text-text-primary">
                   {product.price.toFixed(2)} DA
                 </span>
               </div>
-              <h2 className="mb-3 text-xl font-semibold text-white">
+              <h2 className="mb-3 text-xl font-semibold text-text-primary">
                 {product.name}
               </h2>
-              <p className="mb-4 text-sm leading-6 text-slate-300">
+              <p className="mb-4 text-sm leading-6 text-text-secondary">
                 {product.description ?? ''}
               </p>
               <div className="flex flex-wrap gap-2">
                 {normalizeTags(product.tags).map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full bg-slate-800 px-3 py-1 text-xs text-slate-300"
+                    className="rounded-full bg-neutral-800 px-3 py-1 text-xs text-text-secondary"
                   >
                     {tag}
                   </span>
@@ -178,7 +178,7 @@ export default function ProductBrowser({ products }: Props) {
             </div>
           ))
         ) : (
-          <div className="col-span-full rounded-3xl bg-slate-900/80 p-8 text-center text-slate-300">
+          <div className="col-span-full rounded-3xl bg-neutral-900/80 p-8 text-center text-text-secondary">
             No products match this filter.
           </div>
         )}

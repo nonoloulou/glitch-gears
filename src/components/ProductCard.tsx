@@ -52,7 +52,7 @@ export default function ProductCard({
           </div>
         )}
         {hasDiscount && (
-          <span className="absolute right-3 top-3 rounded-full bg-slate-700 px-3 py-1 text-xs font-semibold text-slate-100 shadow-lg">
+          <span className="absolute right-3 top-3 rounded-full bg-neutral-700 px-3 py-1 text-xs font-semibold text-neutral-100 shadow-lg">
             {discountPercent}% off
           </span>
         )}
@@ -102,8 +102,8 @@ export default function ProductCard({
                 onClick={() => onTagClick(tag)}
                 className={`rounded-full px-3 py-1 text-xs transition-all duration-300 ${
                   activeTag === tag
-                    ? "bg-slate-700 text-slate-100"
-                    : "bg-surface-muted text-text-secondary hover:bg-slate-700 hover:text-white"
+                    ? "bg-neutral-700 text-neutral-100"
+                    : "bg-surface-muted text-text-secondary hover:bg-neutral-700 hover:text-white"
                 }`}
               >
                 {tag}

@@ -153,7 +153,7 @@ export default function AdminDashboard() {
             onClick={() => setTab(t)}
             className={`flex-1 rounded-xl px-4 py-2.5 text-sm font-medium capitalize transition-all duration-300 ${
               tab === t
-                ? "bg-slate-700 text-text-primary shadow-sm"
+                ? "bg-neutral-700 text-text-primary shadow-sm"
                 : "text-text-secondary hover:text-white"
             }`}
           >
@@ -276,8 +276,8 @@ export default function AdminDashboard() {
                         <span
                           className={`rounded-full px-2 py-0.5 text-xs ${
                             promotion.active
-                              ? "bg-slate-700 text-slate-100"
-                              : "bg-slate-800 text-slate-400"
+                              ? "bg-neutral-700 text-neutral-100"
+                              : "bg-neutral-800 text-neutral-400"
                           }`}
                         >
                           {promotion.active ? "Active" : "Inactive"}
@@ -311,7 +311,7 @@ export default function AdminDashboard() {
         </div>
       )}
 
-      <div className="rounded-2xl bg-slate-950/80 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
+      <div className="rounded-2xl bg-neutral-950/80 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
         <TypeManager />
       </div>
     </div>
