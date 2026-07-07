@@ -155,9 +155,22 @@ export default function ProductBrowser({ products }: Props) {
                 <span className="rounded-full bg-neutral-800 px-3 py-1 text-xs uppercase tracking-[0.18em] text-text-secondary">
                   {product.type || 'Uncategorized'}
                 </span>
-                <span className="text-lg font-semibold text-text-primary">
-                  {product.price.toFixed(2)} DA
-                </span>
+                <div className="text-right">
+                  {product.discount_price != null && product.discount_price < product.price ? (
+                    <>
+                      <p className="text-sm text-text-muted line-through">
+                        {formatPrice(product.price)}
+                      </p>
+                      <p className="text-lg font-semibold text-text-primary">
+                        {formatPrice(product.discount_price)}
+                      </p>
+                    </>
+                  ) : (
+                    <p className="text-lg font-semibold text-text-primary">
+                      {formatPrice(product.price)}
+                    </p>
+                  )}
+                </div>
               </div>
               <h2 className="mb-3 text-xl font-semibold text-text-primary">
                 {product.name}
