@@ -1,8 +1,7 @@
 'use client'
-ProductBrowser
-import { formatPrice } from '@/lib/utils'; 
 
 import { useMemo, useState } from 'react'
+import { formatPrice } from '@/lib/utils'
 
 type Product = {
   id: string
