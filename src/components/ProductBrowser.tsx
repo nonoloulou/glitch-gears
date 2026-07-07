@@ -1,4 +1,6 @@
 'use client'
+ProductBrowser
+IMPORT{ FORMAT_PRICE } FROM '@/LIB/UTILS'
 
 import { useMemo, useState } from 'react'
 
