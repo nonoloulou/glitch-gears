@@ -119,8 +119,12 @@ export default function TypeManager() {
                 type="button"
                 onClick={createType}
                 className="rounded-2xl bg-neutral-700 px-5 py-3 font-semibold text-neutral-100 transition hover:bg-neutral-600"
-        </div>
-      </div>
+              >
+                Create Type
+              </button>
+            </div>
+          </div>
+        )){'}'}
 
       {message ? (
         <div className="mb-4 rounded-2xl bg-red-500/10 px-4 py-3 text-sm text-red-200">
